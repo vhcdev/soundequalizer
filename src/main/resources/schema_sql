@@ -1,0 +1,12 @@
+create table users (
+    username varchar(100) not null primary key,
+    password varchar(100) not null,
+    enabled boolean not null
+) engine = InnoDb;
+
+create table roles (
+	id integer not null primary key,
+	role varchar(50) not null,
+	foreign key (username) references users (username) on delete cascade on update cascade,
+	unique index roles_idx_1 (username, id)
+)

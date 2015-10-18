@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>VHCSoft</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+    <div th:fragment="ajax-errormsg_fragment" class="text-center">
+        <!--
+        <p class="text-danger hidden" id="id_ajax_errormsg"></p>
+        
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
+-->
+        <div id="id-errormodal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: none;">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Opps!!!</h4>
+                    </div>
+                    <div class="modal-body">
+                        <span class="text-info" id="id-errormsg"></span>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="/login" class="btn btn-link btn-lg" id="id-errormsg-close" role="button">Continue</a>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+    </div>
+</body>
+
+</html>

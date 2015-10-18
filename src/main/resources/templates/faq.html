@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:include="fragments/libs::libs_fragment">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12" th:include="fragments/header::header_fragment">
+                <!-- Header-->
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                <h2>FAQ</h2>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <!--Content-->
+                <div class="panel panel-default">
+                    <div class="panel-heading">What is MVEO ?</div>
+                    <div class="panel-body">
+                        MVEO is an online service, which analyses and adjusts the volume of your mp3 files, so that they have the same volume. 
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">Which audio formats are supported by Music Volume Equalizer Online ? (MVEO)</div>
+                    <div class="panel-body">
+                        Currently we support only .mp3 format. The next release will support a wide range of formats like (ogg, wav, mp4, aac...).
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">How many files can I upload ?</div>
+                    <div class="panel-body">Withou registration you are limited to upload 5 files. After registration you can upload as many files as you want.
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">What benefit do i have when i register ?</div>
+                    <div class="panel-body">You can upload as many files as you want. Your music files will not be deleted after closing your browser. You can share your files to multiple devices.
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">Can i close my browser during uploading ?</div>
+                    <div class="panel-body">No. It is important that you have your browser open during uploading process.
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">I want to control the volume. How can i do it?</div>
+                    <div class="panel-body">We are building the control volume button and it will be available soon.
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" th:include="fragments/footer::footer_fragment">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

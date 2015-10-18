@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>VHCSoft</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+	<div th:fragment="download_fragment">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<a th:href="@{'/download/zip/'+${zipreport.getDownloadLink()}}">Download All</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

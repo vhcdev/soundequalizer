@@ -1,0 +1,6 @@
+version: v1
+kind: Pod
+spec:
+  containers:
+    - name: mveodb
+      image: gcr.io/mveo-1021/mveodb

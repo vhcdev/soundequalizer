@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>VHCSoft</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>VMEO by VHCSoft</title>
+    <link rel="icon" type="image/png" href="../../static/pictures/logo.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="SoundEqualizer" />
+    <link rel="stylesheet" href="../../static/js/dictionary.css" />
+    <link rel="stylesheet" href="../../static/js/bootstrap-3.3.2/css/timeline.css" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"/>
+    <script src="../../static/js/bootstrap-3.3.2/js/jquery-2.1.3.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div th:fragment="howto_fragment">
+        <div class="page-header text-center">
+            <h2>How to</h2>
+        </div>
+        <ul class="timeline">
+            <li>
+                <div class="timeline-badge success">
+                    <i class="glyphicon glyphicon-cloud-upload"></i></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="timeline-title">Upload files</h4>
+                    </div>
+                    <div class="timeline-body">
+                        Your files will be uploaded to our cloud storage. Because of server cost we are currently limiting to upload up to maximal 5 mp3 files for free use.
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-badge info"><i class="glyphicon glyphicon-volume-up"></i></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="timeline-title">Choose volume</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p>Your ears are happy with 89 db and it is our standard value.</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-badge info"><i class="glyphicon glyphicon-cog"></i></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="timeline-title">Run the equalizer</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p>The equalizer analyses and adjusts the volume of your audio files. After that you will never have to touch your volume button a gain.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-badge success">
+                    <i class="glyphicon glyphicon-cloud-download"></i></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="timeline-title">Download</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p>After equalizing you can download individual files or all files as zip.</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

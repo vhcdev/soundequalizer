@@ -1,0 +1,31 @@
+@CHARSET "UTF-8";
+body{ 
+    background: transparent url("../pictures/bg1.jpg") no-repeat top center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+    
+
+.padding-top-5 {margin-top:5px}
+.padding-top-50 {margin-top:50px}
+.padding-top-55 {margin-top:55px}
+.margin-5{margin:5px}
+.striped {background-color: gray;}
+.green {
+  color: #009933;
+}
+
+.blue {
+	color:#0099CC;
+}
+.cursor-pointer{
+	cursor:pointer;
+}
+.text-center{
+	text-align: center;
+}
+
+.float-right {
+	float: right;
+}

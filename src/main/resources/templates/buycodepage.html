@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <div th:replace="fragments/libs::libs_fragment"></div>
+    <link rel="stylesheet" th:href="@{/js/bootstrap-3.3.2/css/pricingtable.css}" />
+    <link rel="stylesheet" th:href="@{/js/bootstrap-3.3.2/css/font-awesome.min.css}" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12" th:include="fragments/header::header_fragment">
+                <!-- Header-->
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                
+                <!--Content-->
+                <section id="pricing-table">
+                    <div class="container">
+                        <div class="row">
+                            <div class="pricing">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="pricing-table">
+                                        <div class="pricing-header">
+                                            <p class="pricing-title">Free Plan</p>
+                                            <p class="pricing-rate"><sup>$</sup> 0 <span>/Mo.</span></p>
+                                            <a th:href="@{/payment/plan1}" class="btn btn-custom">Free Use</a>
+                                        </div>
+                                        <div class="pricing-list">
+                                            <ul>
+                                                <li><i class="fa fa-file-audio-o"></i><span>4 mp3 files uploads</span> </li>
+                                                <li><i class="fa fa-database"></i><span>20 mb each uploads </span>  </li>
+                                                <li><i class="fa fa-volume-up"></i><span>no volume control </span><i class="fa  fa-close"></i></li>
+                                                <li><i class="fa fa-share-alt"></i><span>unable to share multiple devices </span><i class="fa  fa-close"></i></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="pricing-table">
+                                        <div class="pricing-header">
+                                            <p class="pricing-title">Business Plan</p>
+                                            <p class="pricing-rate"><sup>$</sup> 5 <span>/Mo.</span></p>
+                                            <a th:href="@{/payment/plan2}" class="btn btn-custom">Pay with Paypal</a>
+                                        </div>
+                                        <div class="pricing-list">
+                                            <ul>
+                                                <li><i class="fa fa-file-audio-o"></i><span>unlimit upload files </span> <i class="fa  fa-check-circle-o"></i> </li>
+                                                <li><i class="fa fa-database"></i><span>100 mb each uploads </span> <i class="fa  fa-check-circle-o"></i> </li>
+                                                <li><i class="fa fa-volume-up"></i><span>volume control</span> <i class="fa  fa-check-circle-o"></i></li>
+                                                <li><i class="fa fa-share-alt"></i><span>share multiple devices </span><i class="fa  fa-check-circle-o"></i></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

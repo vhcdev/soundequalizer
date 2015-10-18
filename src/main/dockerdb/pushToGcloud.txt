@@ -1,0 +1,7 @@
+gcloud compute instances create mveo --scopes https://www.googleapis.com/auth/devstorage.read_write
+
+gcloud compute instances create mveodb \
+    --image container-vm \
+    --metadata-from-file google-container-manifest=containers.yaml \
+    --zone us-central1-a \
+    --machine-type f1-micro

@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:include="fragments/libs::libs_fragment">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div th:include="fragments/header::header_fragment">
+                    <!-- header -->
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h3 class="text-center">MVEO is <b>FREE</b> in beta version.</h3>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-sm-offset-3 col-md-offset-3 col-lg-offset-3">
+                <div th:include="fragments/errormsg::errormsg_fragment">
+                    <!-- error msg -->
+                </div>
+                <form action="/registration" method="POST" role="form" th:object="${registrationForm}">
+                    <legend>Registration</legend>
+                    <div class="form-group">
+                        <label for="">Email*:</label>
+                        <p th:if="${#fields.hasErrors('email')}" class="text-danger">Your email is invalid !!!.</p>
+                        <input type="email" name="email" id="inputEmail" class="form-control" value="" required="required" title="Email" th:field="*{email}" placeholder="example@mail.com "/>
+                        <label for="">Password*:</label>
+                        <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="text-danger"></p>
+                        <input placeholder="longger than 4 characters" type="text" name="Name" id="input" class="form-control" value="" th:field="*{password}" />
+                    </div>
+                    <button type="submit" class="btn btn-info">SignUp</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" th:include="fragments/footer::footer_fragment">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:include="fragments/libs::libs_fragment">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 ">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div th:include="fragments/header::header_fragment">
+                            <!-- header -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Display -->
+                <div class="row" id="id_ct_download" th:if="${!hasDownloadFile}">
+                    <div class="col-md-12 text-center">
+                        <h4>Opps!!! It looks like that you dont have any song in your library.
+								</h4>
+                        <a class="btn btn-lg btn-info" href="/" role="button">Upload songs</a>
+                    </div>
+                </div>
+                <div class="row" id="id_ct_download" th:if="${hasDownloadFile}">
+                    <div class="col-md-12 text-center">
+                        <h5>Thank you for using MVEO. Now it is time to download your musics.</h5>
+                        <a th:href="@{${getDownloadZipFileLink}}" class="btn btn-info btn-lg active" role="button">
+                            <span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> Download All
+                        </a>
+                    </div>
+                    <div class="col-md-12 ">
+                        <p>
+                            <ul class="list-group" id="id_ct_files">
+                                <li class="list-group-item" th:each="file: ${getFilesDownloadInfo}">
+                                    <span class="glyphicon glyphicon-download green" aria-hidden="true"></span>
+                                    <a th:href="@{${file.link}}" th:text="${file.name}"></a>
+                                    <div class="pull-right"><a th:href="@{'/user/delete/' + ${file.fileid}}" th:if="${isUserOrAdmin}"><i class="fa fa-trash-o"></i></a></div>
+                                </li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" th:include="fragments/footer::footer_fragment">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>VHCSoft</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+    <div th:fragment="errormsg_fragment">
+        <div th:if="${hasError}">
+            <div class="alert alert-danger" th:each="msg: ${errorMsg}" th:text="${msg}" role="alert"></div>
+        </div>
+    </div>
+</body>
+
+</html>

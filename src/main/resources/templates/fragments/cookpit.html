@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>VHCSoft</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+    <div th:fragment="cookpit_fragment">
+        <!--cookpit form-->
+        <form id="id_form" th:action="@{/uploaddir}" role="form" method="post" enctype="multipart/form-data" class="hidden">
+            <button type="submit" id="id_submit"></button>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="input-group">
+                        <input type="file" id="id_hfinput" name="files" multiple="multiple" accept="audio/*" />
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!--cookpit display-->
+        <div class="row">
+            <div class="col-md-6 col-sm-6 text-center">
+                <p>
+                    <button id="id_bt_selectfiles" type="button" class="btn btn-lg btn-info">
+                        <span class="glyphicon glyphicon-cloud-upload " aria-hidden="true"></span> Upload ...</button>
+                    <button type="button" class="hidden btn btn-lg btn-info" id="id_bt_cancelupload">
+                        <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span> Cancel
+                    </button>
+                </p>
+            </div>
+            <div class="col-md-6 col-sm-6 text-center">
+                <p>
+                    <button id="id_bt_normalizer" type="button" class="btn btn-lg btn-info" disabled="disabled">
+                        <span class="glyphicon glyphicon glyphicon-cog" aria-hidden="true"></span> Run equalizer</button>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
