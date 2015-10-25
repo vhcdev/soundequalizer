@@ -21,7 +21,7 @@ public class MVCSecurityConfig extends WebSecurityConfigurerAdapter {
 	private UserDetailsService userDetailsService;
 
 	@Autowired
-	DirectoryManagerService dirmanager;
+	private DirectoryManagerService dirmanager;
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
